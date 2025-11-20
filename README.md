@@ -4,7 +4,7 @@
 一个基于 **React + Three.js + Vite** 打造的 3D 中国象棋体验。项目支持鼠标拾取棋子、实时高亮可走位置、具备较高水平的 AI 对手，并在落子时播放提示音效，营造沉浸式对弈氛围。
 
 > 运行效果示例  
-> ![screenshot](docs/screenshot.jpg)  
+> ![screenshot](docs/screenshot.png)  
 > （如需替换截图，请在 `docs/` 目录放入实际图片并更新链接。）
 
 ---
