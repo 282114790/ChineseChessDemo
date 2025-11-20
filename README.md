@@ -1,3 +1,4 @@
+
 # 璀璨象棋 · ChineseChessDemo
 
 一个基于 **React + Three.js + Vite** 打造的 3D 中国象棋体验。项目支持鼠标拾取棋子、实时高亮可走位置、具备较高水平的 AI 对手，并在落子时播放提示音效，营造沉浸式对弈氛围。
@@ -135,5 +136,6 @@ ChineseChessDemo
 ---
 
 欢迎提交 Issue / PR，一起打磨更逼真的 3D 国粹体验！🎉
+
 
 
