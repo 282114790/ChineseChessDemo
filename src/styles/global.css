@@ -1,0 +1,205 @@
+:root {
+  font-family: 'HarmonyOS Sans', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+  color: #f8fafc;
+  background-color: #050608;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0a0f1c 0%, #040507 60%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.app-shell {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+}
+
+.canvas-panel {
+  flex: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(145deg, #0c101c, #05070a);
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.hud-panel {
+  width: 360px;
+  background: rgba(12, 16, 24, 0.9);
+  border-radius: 24px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+}
+
+.hud-header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  letter-spacing: 0.1em;
+}
+
+.hud-header p {
+  margin: 0.25rem 0 0;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+}
+
+.hud-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.status-chip {
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  background: linear-gradient(120deg, #ff5f6d, #ffc371);
+  color: #1b1b1b;
+  font-weight: 600;
+  text-align: center;
+}
+
+.ai-indicator {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  font-size: 0.92rem;
+  color: #f8fafc;
+  opacity: 0.9;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.controls {
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+}
+
+.field select {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0.6rem;
+  background: rgba(15, 23, 42, 0.7);
+  color: inherit;
+  font-size: 0.95rem;
+}
+
+.ghost-button {
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: #f8fafc;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ghost-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.section-title {
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  color: #94a3b8;
+}
+
+.muted {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.moves-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+}
+
+.moves-list li {
+  padding: 0.55rem 0.6rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.moves-list li.latest {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.moves-list em {
+  font-style: normal;
+  color: #fbbf24;
+  font-size: 0.85rem;
+}
+
+.last-move p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+@media (max-width: 1200px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .hud-panel {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
+
+
