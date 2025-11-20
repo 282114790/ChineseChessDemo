@@ -5,7 +5,6 @@
 
 > 运行效果示例  
 > ![screenshot](docs/screenshot.png)  
-> （如需替换截图，请在 `docs/` 目录放入实际图片并更新链接。）
 
 ---
 
